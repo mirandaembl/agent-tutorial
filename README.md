@@ -4,3 +4,4 @@ creating a sample agent and mcp
 # Notes
 n8n.ai has 14 day trial
 GTN API: https://galaxyproject.org/develop/api/
+inpired by: https://github.com/elixir-europe-training/ELIXIR-TrP-KG-training-metadata/
