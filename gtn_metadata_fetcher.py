@@ -60,6 +60,7 @@ def main():
         # Fetch all topics
         print("\n📚 Fetching all topics...")
         topics = fetcher.fetch_topics()
+        topics = [v for k, v in topics.items()]  # Convert dict to list
         print(f"Found {len(topics)} topics:")
         for topic in topics[:5]:  # Show first 5 topics
             print(f"  • {topic.get('name', 'N/A')} ({topic.get('title', 'N/A')})")
@@ -83,7 +84,7 @@ def main():
             if topic_id:
                 print(f"\n🔍 Fetching details for topic: {topic_id}")
                 topic_details = fetcher.fetch_topic_details(topic_id)
-                tutorials = topic_details.get('materials', {}).get('tutorials', [])
+                tutorials = topic_details.get('materials', [])
                 print(f"  Topic has {len(tutorials)} tutorials")
 
                 # Show first tutorial details
